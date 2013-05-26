@@ -1,0 +1,24 @@
+#!/bin/bash
+#set -x
+
+if [ $# != 2 ] ; then
+	echo "Usage: wordpressMediaDownload <base_of_WP_URL> <no_of_pages>"
+	exit 1
+else
+	wp_url=$1
+	maxPage=$2
+fi 
+
+for (( count=1; $count<=$maxPage; count++ ))
+do
+	rm file.html
+	page="${wp_url}/page/${count}"
+	echo "Downloading page: ${page}"
+	wget -q "${page}" -O file.html || exit 1 
+	echo "Getting all jpg files from ${page}...."
+	grep -o "src=.*jpg" file.html | cut -c 6- | xargs wget -q -x 
+
+	# get the video
+	echo "Getting all video files from ${page}....."
+	grep -o  data=.*video.google.com.*\'\>\<  file.html | cut -c 7- | tr -d "<>'" | sed 's/googleplayer.swf/videoplay/' | sed 's/docId/docid/' | xargs clive
+done

@@ -1,0 +1,12 @@
+#!/bin/bash
+cd /sys/bus/usb/devices
+for i in [0-9]-[0-9]
+do 
+	echo $i; 
+	b=`cat $i/busnum`; 
+	d=`cat $i/devnum`; 
+	echo BUS : $b ; 
+	echo DEVICE: $d; 
+	echo `lsusb | grep "Bus 00$b Device 00$d" | cut -c 20-`; 
+	echo; 
+done
