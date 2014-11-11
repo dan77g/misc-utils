@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?p2f version='1.0.0'?>
+<p2f version='1.0.0'>
+  <ius size='6'>
+    <iu id='epp.package.standard' name='Eclipse Standard/SDK' version='4.4.0.20140612-0500'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/releases/luna'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.wst.web_ui.feature.feature.group' name='Eclipse Web Developer Tools' version='3.6.1.v201410301409'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/webtools/repository/luna/'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.wst.xml_ui.feature.feature.group' name='Eclipse XML Editors and Tools' version='3.6.1.v201409111852'>
+      <repositories size='2'>
+        <repository location='http://download.eclipse.org/webtools/repository/luna/'/>
+        <repository location='http://download.eclipse.org/releases/luna'/>
+      </repositories>
+    </iu>
+    <iu id='org.eclipse.wst.jsdt.feature.feature.group' name='JavaScript Development Tools' version='1.6.100.v201410221502'>
+      <repositories size='1'>
+        <repository location='http://download.eclipse.org/webtools/repository/luna/'/>
+      </repositories>
+    </iu>
+    <iu id='org.python.pydev.feature.feature.group' name='PyDev for Eclipse' version='3.8.0.201409251235'>
+      <repositories size='1'>
+        <repository location='http://pydev.org/updates'/>
+      </repositories>
+    </iu>
+    <iu id='net.sourceforge.shelled.feature.group' name='ShellEd' version='2.0.3'>
+      <repositories size='1'>
+        <repository location='http://sourceforge.net/projects/shelled/files/shelled/update/'/>
+      </repositories>
+    </iu>
+  </ius>
+</p2f>
