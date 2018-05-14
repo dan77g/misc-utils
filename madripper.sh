@@ -7,7 +7,11 @@
 # - lsdvd
 # - handbrake-cli
 
-dvdname="WSKO_DVD1of2"
+## Usage:
+## madripper.sh <dvd_device|iso_file|video_ts_dir>
+
+# Set filename base here
+dvdname="WSKO_Ken"
 
 inputfile=$1
 #preset="CLI Default"
